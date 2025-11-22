@@ -1,0 +1,17 @@
+server:
+  # Porta para este microserviço rodar
+  port: 8081
+
+spring:
+  application:
+    name: barbershop-service
+  data:
+    mongodb:
+      # URI de conexão com o MongoDB. Ajuste conforme sua configuração.
+      # Exemplo local padrão: mongodb://localhost:27017/barbearia_catalogo
+      uri: ${MONGODB_URI:mongodb://localhost:27017/barbearia_catalogo}
+
+logging:
+  level:
+    # Definir nível de log para ver mais detalhes de depuração do Spring Data MongoDB
+    org.springframework.data.mongodb: INFO
